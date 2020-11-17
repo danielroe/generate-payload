@@ -7,11 +7,12 @@
 <script>
 export default {
   data: () => ({
-    test: 0,
+    test: 0
   }),
   fetch() {
-    this.test = 24
+    console.log("fetching now");
+    this.test = 24;
   },
-  fetchOnServer: false,
-}
+  fetchOnServer: false
+};
 </script>
