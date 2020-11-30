@@ -6,13 +6,18 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.test
+    }
+  },
+  async asyncData({ payload }) {
+    return {
+      test: payload.name
+    }
+  },
   data: () => ({
     test: 0
   }),
-  fetch() {
-    console.log("fetching now");
-    this.test = 24;
-  },
-  fetchOnServer: false
 };
 </script>
